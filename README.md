@@ -7,17 +7,19 @@ Este projeto consiste em um conjunto de testes técnicos que envolvem Web Scrapi
 ## Tecnologias Utilizadas
 
 - Python: 3.12.8
-- PostgreSQL: (>10.0)
+- PostgreSQL: 10.0
 - FastAPI
 - Vue.js
 - requests: 2.32.3
 - beautifulsoup4: 4.13.3
+- pandas: 2.2.3
+- tabula-py: 2.10.0
 
 ---
 
 ## Estrutura do Projeto
 
-Cada módulo do projeto possui sua própria documentação. Leia atentamente para compreender seu funcionamento.
+Cada módulo do projeto possui sua própria documentação.
 
 - 📂 **scraping:** Coleta de dados via Web Scraping e download de arquivos.
 - 📂 **transformacao:** Extração, tratamento e formatação dos dados coletados.
@@ -30,7 +32,7 @@ Cada módulo do projeto possui sua própria documentação. Leia atentamente par
 
 ---
 
-## Como Rodar o Projeto
+## Configurar o Projeto
 
 1. **Configurar o Ambiente Virtual**
 
@@ -41,48 +43,25 @@ Cada módulo do projeto possui sua própria documentação. Leia atentamente par
         pip install -r requirements.txt
     ```
 
-3. **Configurar o Banco de Dados**
+2. **Configurar o Banco de Dados**
 
     Certifique-se de que o PostgreSQL está rodando e crie o banco necessário.
 
-psql -U usuario -d meu_banco -f banco_de_dados/schema.sql
 
-3️⃣ Executar os Módulos
+3. **Executar os Módulos**
 
-🔹 Web Scraping
+    Depois de configurar o ambiente e ter feito o download das bibliotecas, navegue pelas pasta e acesse a documentação do respectivo módulo de como rodar e as suas responsabilidades.
 
-python scraping/scraper.py
 
-🔹 Transformação de Dados
+---
 
-python transformacao/extracao.py
-python transformacao/transformacao.py
-python transformacao/exportacao.py
+## Documentação dos Módulos
 
-🔹 Importação para o Banco de Dados
+- [Scraping](scraping\README.md)
+- [Transformação de Dados](transformacao/README.md)
+- Banco de Dados
+- API
 
-python banco_de_dados/importacao.py
-
-🔹 Iniciar a API
-
-uvicorn api.main:app --reload
-
-A API estará disponível em http://localhost:8000.
-
-4️⃣ Testar a API via Postman
-
-Importe a coleção do Postman (postman_collection.json) e execute as requisições.
-
-📂 Documentação dos Módulos
-
-Scraping
-
-Transformação de Dados
-
-Banco de Dados
-
-API
-
-📜 Licença
+---
 
 Este projeto é apenas para fins de teste técnico.
