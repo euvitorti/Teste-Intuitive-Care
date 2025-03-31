@@ -68,7 +68,7 @@ Cada módulo do projeto possui sua própria documentação.
 - [Scraping](scraping/README.md)
 - [Transformação de Dados](transformacao/README.md)
 - [Banco de Dados](banco_de_dados/README.md)
-- [API]()
+- [API](api/README.md)
 
 ---
 

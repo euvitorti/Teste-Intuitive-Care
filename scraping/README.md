@@ -35,15 +35,7 @@ Este projeto realiza o download de arquivos PDF a partir de uma página web espe
 
 ## Como Usar
 
-1. **Instale as dependências**
-
-    Certifique-se de ter o Python instalado e execute:
-
-    ```
-        pip install -r requirements.txt
-    ```
-
-2. **Execute o script principal**
+1. **Execute o script principal**
 
     ```
         python main.py
