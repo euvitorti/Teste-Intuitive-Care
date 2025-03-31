@@ -1,6 +1,6 @@
 import psycopg2
 from psycopg2.extras import RealDictCursor
-from banco_de_dados.database.conectar_bd import conectar_banco_de_dados
+from banco_de_dados.db_config.db_config import db_config
 import os
 
 # Obtém o diretório base do arquivo atual
@@ -8,6 +8,16 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Define o caminho do arquivo SQL
 SQL_BUSCAR_OPERADORAS = os.path.join(BASE_DIR, "..", "sql", "buscar_operadoras.sql")
+
+def conectar_banco_de_dados():
+    """
+    Cria uma conexão com o banco de dados.
+    """
+    try:
+        return psycopg2.connect(**db_config)
+    except psycopg2.Error as e:
+        raise Exception(f"Erro ao conectar ao banco: {str(e)}")
+
 
 def carregar_query(caminho_sql: str) -> str:
     """

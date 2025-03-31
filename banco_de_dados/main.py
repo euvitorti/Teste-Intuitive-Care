@@ -10,20 +10,20 @@ def main():
     """
     
     # Caminho do arquivo SQL contendo os comandos para criação das tabelas.
-    # arquivo_sql = "sql/criar_tabelas.sql"
-    # criar_tabelas(arquivo_sql)
+    arquivo_sql = "sql/criar_tabelas.sql"
+    criar_tabelas(arquivo_sql)
 
-    # # Caminho da pasta com os arquivos CSV para a tabela 'demonstracoes_contabeis'.
-    # pasta_demonstracoes = "tabelas/demonstracoes_contabeis"
+    # Caminho da pasta com os arquivos CSV para a tabela 'demonstracoes_contabeis'.
+    pasta_demonstracoes = "tabelas/demonstracoes_contabeis"
     
-    # # Importa os arquivos CSV para a tabela 'demonstracoes_contabeis' de forma paralela.
-    # importar_csv_para_tabela_em_paralelo(pasta_demonstracoes, "demonstracoes_contabeis")
+    # Importa os arquivos CSV para a tabela 'demonstracoes_contabeis' de forma paralela.
+    importar_csv_para_tabela_em_paralelo(pasta_demonstracoes, "demonstracoes_contabeis")
 
-    # # Caminho da pasta com os arquivos CSV para a tabela 'operadoras_ativas'.
-    # pasta_operadoras = "tabelas/operadoras_de_plano_de_saude_ativas"
+    # Caminho da pasta com os arquivos CSV para a tabela 'operadoras_ativas'.
+    pasta_operadoras = "tabelas/operadoras_de_plano_de_saude_ativas"
     
-    # # Importa os arquivos CSV para a tabela 'operadoras_ativas' de forma paralela.
-    # importar_csv_para_tabela_em_paralelo(pasta_operadoras, "operadoras_ativas")
+    # Importa os arquivos CSV para a tabela 'operadoras_ativas' de forma paralela.
+    importar_csv_para_tabela_em_paralelo(pasta_operadoras, "operadoras_ativas")
     
     # Consultar as 10 operadoras com maiores despesas
     obter_operadoras()

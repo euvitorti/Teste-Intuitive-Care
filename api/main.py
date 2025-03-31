@@ -1,9 +1,22 @@
 from fastapi import FastAPI, Query, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from api.service.api_service import buscar_operadoras
 from api.validar.validar_entrada import validar_termo_busca
 
-# Inicializa a aplicação FastAPI
 app = FastAPI()
+
+# Configurando o CORS para permitir requisições do frontend
+origins = [
+    "http://localhost:5173",  # endereço do frontend
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # ou use ["*"] para permitir qualquer origem
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/operadoras/")
 def buscar_operadoras_controller(termo: str = Query(..., title="Termo de busca")):

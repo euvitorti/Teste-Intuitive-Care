@@ -1,5 +1,5 @@
 import psycopg2
-from banco_de_dados.db_config.db_config import db_config
+from db_config.db_config import db_config
 
 def conectar_banco_de_dados():
     """
