@@ -69,6 +69,7 @@ Cada módulo do projeto possui sua própria documentação.
 - [Transformação de Dados](transformacao/README.md)
 - [Banco de Dados](banco_de_dados/README.md)
 - [API](api/README.md)
+- [Front](intuitiveFront/README.md)
 
 ---
 
