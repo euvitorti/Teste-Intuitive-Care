@@ -1,6 +1,6 @@
-# Módulo de Busca de Operadoras de Saúde com FastAPI e PostgreSQL
+# Módulo de Busca de Operadoras com FastAPI e PostgreSQL
 
-Este módulo tem como objetivo realizar consultas de operadoras de saúde por meio de uma API desenvolvida em FastAPI, utilizando um banco de dados PostgreSQL.
+Este módulo tem como objetivo realizar consultas de operadoras por meio de uma API desenvolvida em FastAPI, utilizando um banco de dados PostgreSQL.
 
 ---
 
@@ -80,10 +80,4 @@ Este módulo tem como objetivo realizar consultas de operadoras de saúde por me
 
 ### Conclusão
 
-Este módulo fornece uma API rápida e eficiente para buscar operadoras de saúde no banco de dados PostgreSQL. O código está estruturado de forma modular para facilitar manutenção e expansão futura.
-
-Personalização e Modificações
-
-Alterar a Query SQL: Se for necessário modificar a consulta, edite o arquivo buscar_operadoras.sql.
-
-Modificar a validação do termo: Ajuste a função validar_termo_busca caso necessário.
+Este módulo fornece uma API rápida e eficiente para buscar operadoras no banco de dados PostgreSQL. O código está estruturado de forma modular para facilitar manutenção e expansão futura.
