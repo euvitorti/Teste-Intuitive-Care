@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "3d72b7da-3066-460a-80ab-838866d67cf5",
+		"name": "Intuitive Care",
+		"description": "- Deve retornar os dados encontrados\n    \n- Deve ocorrer um erro, pois não possui caracteres insuficientes\n    \n- Deve retornar uma mensagem de erro, pois não há parâmetro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32172649"
+	},
+	"item": [
+		{
+			"name": "DEVE_RETORNAR_DADO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/operadoras/?termo=18 DE JULHO ADMINISTRADORA DE BENEFÍCIOS LTDA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"operadoras",
+						""
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": "18 DE JULHO ADMINISTRADORA DE BENEFÍCIOS LTDA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEVE_OCORRER_ERRO_PARAM_INSUFICIENTE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/operadoras/?termo=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"operadoras",
+						""
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEVE_OCORRER_ERRO_CAMPO_VAZIO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/operadoras/?termo=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"operadoras",
+						""
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
