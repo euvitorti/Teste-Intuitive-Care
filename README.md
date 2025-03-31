@@ -7,13 +7,14 @@ Este projeto consiste em um conjunto de testes técnicos que envolvem Web Scrapi
 ## Tecnologias Utilizadas
 
 - Python: 3.12.8
-- PostgreSQL: 10.0
+- PostgreSQL: 16.8.1
 - FastAPI
 - Vue.js
 - requests: 2.32.3
 - beautifulsoup4: 4.13.3
 - pandas: 2.2.3
 - tabula-py: 2.10.0
+- psycopg2: 2.9.10
 
 ---
 
@@ -45,22 +46,29 @@ Cada módulo do projeto possui sua própria documentação.
 
 2. **Configurar o Banco de Dados**
 
-    Certifique-se de que o PostgreSQL está rodando e crie o banco necessário.
-
+    Certifique-se de que o PostgreSQL está rodando e crie o banco necessário, pois vamos precisar para a configuração do módulo Banco de Dados.
 
 3. **Executar os Módulos**
 
     Depois de configurar o ambiente e ter feito o download das bibliotecas, navegue pelas pasta e acesse a documentação do respectivo módulo de como rodar e as suas responsabilidades.
 
+4. **Executar o comando principal**
+
+    Ao executar:
+
+    ```
+        python main.py
+    ```
+    Certifique-se de estar na pasta do projeto em questão.
 
 ---
 
 ## Documentação dos Módulos
 
-- [Scraping](scraping\README.md)
+- [Scraping](scraping/README.md)
 - [Transformação de Dados](transformacao/README.md)
-- Banco de Dados
-- API
+- [Banco de Dados](banco_de_dados/README.md)
+- [API]()
 
 ---
 
