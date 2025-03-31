@@ -2,7 +2,7 @@ import os
 import psycopg2
 import tempfile
 import concurrent.futures
-from db_config.db_config import db_config
+from database.conectar_bd import conectar_banco_de_dados
 
 def importar_csv_individual(caminho_arquivo, tabela, delimitador=';', codificacao='UTF8', caractere_citacao='"'):
     """
@@ -18,7 +18,7 @@ def importar_csv_individual(caminho_arquivo, tabela, delimitador=';', codificaca
     
     try:
         # Estabelece conexão com o banco de dados usando as configurações importadas
-        conexao = psycopg2.connect(**db_config)
+        conexao = conectar_banco_de_dados()
         cursor = conexao.cursor()
 
         # Lê o conteúdo do arquivo e substitui vírgulas por pontos dos valores presentes na tabela

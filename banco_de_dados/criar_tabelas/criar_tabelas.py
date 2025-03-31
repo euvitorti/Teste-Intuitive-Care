@@ -1,5 +1,5 @@
 import psycopg2
-from db_config.db_config import db_config
+from database.conectar_bd import conectar_banco_de_dados
 
 def criar_tabelas(sql_file_path):
     """
@@ -8,9 +8,10 @@ def criar_tabelas(sql_file_path):
     Parâmetros:
     sql_file_path: Caminho do arquivo SQL contendo os comandos de criação de tabelas.
     """
+    
     try:
-        # Estabelece conexão com o banco de dados usando as configurações fornecidas
-        conn = psycopg2.connect(**db_config)
+        # Estabelece conexão com o banco de dados utilizando a função centralizada
+        conn = conectar_banco_de_dados()
         cursor = conn.cursor()
 
         # Lê o conteúdo do arquivo SQL
@@ -34,3 +35,4 @@ def criar_tabelas(sql_file_path):
             cursor.close()
         if conn:
             conn.close()
+            
