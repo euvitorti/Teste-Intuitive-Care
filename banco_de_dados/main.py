@@ -20,7 +20,7 @@ def main():
     importar_csv_para_tabela_em_paralelo(pasta_demonstracoes, "demonstracoes_contabeis")
 
     # Caminho da pasta com os arquivos CSV para a tabela 'operadoras_ativas'.
-    pasta_operadoras = "tabelas/operadoras_de_plano_de_saude_ativas"
+    pasta_operadoras = "tabelas/operadoras_ativas"
     
     # Importa os arquivos CSV para a tabela 'operadoras_ativas' de forma paralela.
     importar_csv_para_tabela_em_paralelo(pasta_operadoras, "operadoras_ativas")
