@@ -18,7 +18,6 @@ def conectar_banco_de_dados():
     except psycopg2.Error as e:
         raise Exception(f"Erro ao conectar ao banco: {str(e)}")
 
-
 def carregar_query(caminho_sql: str) -> str:
     """
     Carrega e retorna o conteúdo de um arquivo SQL.
@@ -33,7 +32,6 @@ def carregar_query(caminho_sql: str) -> str:
             return file.read()
     except FileNotFoundError:
         raise Exception("Arquivo SQL não encontrado.")
-
 
 def buscar_operadoras(termo: str):
     """
