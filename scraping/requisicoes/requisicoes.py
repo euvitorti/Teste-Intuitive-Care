@@ -14,7 +14,7 @@ def baixar_pagina(url):
         str ou None: Conteúdo HTML da página ou None se ocorrer algum erro.
     """
     try:
-        response = requests.get(url, timeout=15)
+        response = requests.get(url, timeout=60)
         response.raise_for_status()
         return response.text
     except requests.exceptions.RequestException as e:

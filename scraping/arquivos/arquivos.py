@@ -44,7 +44,7 @@ def download_arquivo(link, pasta_destino):
 
     try:
         print(f"Baixando {nome_arquivo} de {link}...")
-        response = requests.get(link, timeout=10)
+        response = requests.get(link, timeout=60)
         response.raise_for_status()
 
         with open(caminho_arquivo, "wb") as file:
