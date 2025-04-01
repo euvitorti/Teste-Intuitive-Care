@@ -8,8 +8,8 @@ Este projeto consiste em um conjunto de testes técnicos que envolvem Web Scrapi
 
 - Python: 3.12.8
 - PostgreSQL: 16.8.1
-- FastAPI
-- Vue.js
+- FastAPI: 0.115.12
+- Vue.js: 3.5.13
 - requests: 2.32.3
 - beautifulsoup4: 4.13.3
 - pandas: 2.2.3
@@ -40,7 +40,7 @@ Cada módulo do projeto possui sua própria documentação.
     ```bash
         python -m venv intuitive
         source venv/bin/activate  # Linux/Mac
-        venv\Scripts\activate     # Windows
+        intuitive\Scripts\activate     # Windows
         pip install -r requirements.txt
     ```
 
@@ -70,7 +70,7 @@ Cada módulo do projeto possui sua própria documentação.
 - [Banco de Dados](banco_de_dados/README.md)
 - [API](api/README.md)
 - [Front](intuitiveFront/README.md)
-
+- [Postman](Postman/README.md)
 ---
 
 Este projeto é apenas para fins de teste técnico.
