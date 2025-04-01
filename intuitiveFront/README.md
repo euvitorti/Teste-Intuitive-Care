@@ -11,9 +11,10 @@ Este módulo é uma aplicação frontend desenvolvida em Vue.js com Vite e um ba
 
 ---
 
-## Pré-requisitos
+## Tecnologias necessárias
 
-- Node.js
+- **Node.js:** 22.14.0
+- **Vue.js:** 3.5.13
 - [Servidor BackEnd](../api/README.md)
 
 ---
@@ -25,7 +26,7 @@ Este módulo é uma aplicação frontend desenvolvida em Vue.js com Vite e um ba
 2. **Navegue para a pasta do backend:**
 
     ```
-        cd Teste-Intuitive-Care\intuitiveFront
+        cd intuitiveFront
     ```
 
 3. **Rodando o Frontend (Vue + Vite):**

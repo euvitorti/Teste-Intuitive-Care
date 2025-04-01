@@ -12,11 +12,12 @@ const buscarOperadoras = async () => {
   try {
     const response = await fetch(`http://127.0.0.1:8000/operadoras/?termo=${termo.value}`)
 
+    const data = await response.json()
+
     if (!response.ok) {
-      throw new Error('Nenhuma operadora encontrada')
+      throw new Error(data.detail)
     }
 
-    const data = await response.json()
     resultados.value = data.resultados
   } catch (err) {
     erro.value = err.message
@@ -28,33 +29,18 @@ const buscarOperadoras = async () => {
   <div class="container">
     <h1>Buscar Operadoras</h1>
     <div class="search-box">
-      <input
-        v-model="termo"
-        placeholder="Digite um termo"
-        class="search-input"
-      />
+      <input v-model="termo" placeholder="Digite um termo" class="search-input" />
       <button @click="buscarOperadoras" class="search-button">Buscar</button>
     </div>
 
     <div v-if="erro" class="error">{{ erro }}</div>
 
     <div v-if="resultados.length" class="result-list">
-      <div
-        v-for="operadora in resultados"
-        :key="operadora.cnpj"
-        class="card"
-      >
+      <div v-for="operadora in resultados" :key="operadora.razao_social" class="card">
         <h2>{{ operadora.razao_social }}</h2>
-        <p>
-          <strong>Modalidade:</strong> {{ operadora.modalidade }} ({{ operadora.uf }})
-        </p>
-        <p>
-          <strong>Telefone:</strong> {{ operadora.telefone }}
-        </p>
-        <p>
-          <strong>Representante:</strong>
-          {{ operadora.representante }} ({{ operadora.cargo_representante }})
-        </p>
+        <p><strong>Modalidade:</strong> {{ operadora.modalidade }} ({{ operadora.uf }})</p>
+        <p><strong>Telefone:</strong> {{ operadora.telefone }}</p>
+        <p><strong>Representante:</strong> {{ operadora.representante }} ({{ operadora.cargo_representante }})</p>
       </div>
     </div>
   </div>
@@ -62,50 +48,56 @@ const buscarOperadoras = async () => {
 
 <style scoped>
 .container {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: 40px auto;
   padding: 20px;
   font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: white;
 }
 
 .search-box {
   display: flex;
   justify-content: center;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
 .search-input {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
+  border: 1px solid #444;
+  border-radius: 8px;
   outline: none;
+  background: #333;
+  color: white;
 }
 
 .search-input:focus {
-  border-color: #007bff;
+  border-color: #00bfff;
 }
 
 .search-button {
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 16px;
   border: none;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 0 4px 4px 0;
+  background: #00bfff;
+  color: white;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
 
 .search-button:hover {
-  background-color: #0056b3;
+  background: #009acd;
 }
 
 .error {
@@ -121,21 +113,25 @@ h1 {
 }
 
 .card {
-  padding: 15px;
-  border: 1px solid #ddd;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background: #292929;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 .card h2 {
   margin: 0 0 10px;
-  font-size: 20px;
-  color: #333;
+  font-size: 22px;
+  color: #00bfff;
 }
 
 .card p {
   margin: 5px 0;
-  color: #555;
+  color: #ccc;
 }
 </style>
