@@ -1,51 +1,54 @@
-# Projeto Vue
+# Projeto Vue - Busca de Operadoras
 
-Este módulo é uma aplicação frontend desenvolvida em Vue.js com Vite e um backend em FastAPI. O frontend faz uma requisição à API para buscar operadoras, e o backend se comunica com um banco de dados para retornar os resultados.
-
----
-
-## O que o frontend faz
-
-1. A interface do usuário permite que o usuário faça uma busca por operadoras através de um termo.
-2. A busca é realizada enviando uma requisição GET para o backend, que retorna uma lista de operadoras.
+Este projeto é uma aplicação frontend desenvolvida em **Vue.js** com **Vite**, que se comunica com um backend em **FastAPI**. A aplicação permite buscar operadoras de saúde por meio de um termo de pesquisa.
 
 ---
 
-## Tecnologias necessárias
+## Funcionalidades
 
+- O usuário pode buscar operadoras inserindo um termo na interface.
+- O frontend realiza uma requisição **GET** para o backend.
+- O backend retorna uma lista de operadoras correspondentes ao termo pesquisado.
+- Os resultados incluem informações detalhadas sobre cada operadora, como **razão social, CNPJ, modalidade, localização, telefone, e-mail/site e data de registro na ANS**.
+
+---
+
+## Tecnologias Utilizadas
+
+- **Frontend:** Vue.js 3.5.13, Vite
+- **Backend:** [FastAPI](../api/README.md)
 - **Node.js:** 22.14.0
-- **Vue.js:** 3.5.13
-- [Servidor BackEnd](../api/README.md)
 
 ---
 
-## Como rodar
+## Como Rodar
 
-1. **Rodando o Backend (FastAPI):** Antes de rodar o frontend, é necessário que a API (backend) esteja rodando. O backend é responsável por processar as requisições feitas pelo frontend.
+### Rodar o Backend (FastAPI)
 
-2. **Navegue para a pasta do backend:**
+Antes de iniciar o frontend, é necessário que o backend esteja em execução.
 
-    ```
-        cd intuitiveFront
-    ```
+### Rodar o Frontend (Vue + Vite)
 
-3. **Rodando o Frontend (Vue + Vite):**
-    Instale as dependências do frontend:
-    ```
-        npm install
-    ```
-    Rode o servidor de desenvolvimento do frontend:
-
-    ```
-        npm run dev
-    ```
-
-    `
-        O frontend estará disponível em http://localhost:5173.
-    `
+1. **Navegue até a pasta do projeto frontend:**
+   ```bash
+   cd intuitiveFront
+   ```
+2. **Instale as dependências:**
+   ```
+   npm install
+   ```
+3. **Inicie o servidor de desenvolvimento:**
+   ```
+   npm run dev
+   ```
+4. **Acesse a aplicação no navegador:**
+   ```
+   http://localhost:5173
+   ```
 
 ---
 
-## Considerações Finais
+## Observações Importantes
 
-Este projeto depende da API estar rodando para funcionar corretamente. A interface do frontend faz requisições ao backend para buscar os dados e exibi-los ao usuário.
+- O **backend precisa estar rodando** para que o frontend funcione corretamente.
+- O frontend faz requisições HTTP para buscar os dados das operadoras e exibi-los na interface.
