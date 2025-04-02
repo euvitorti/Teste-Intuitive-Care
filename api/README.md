@@ -51,6 +51,8 @@ Este módulo tem como objetivo realizar consultas de operadoras por meio de uma 
 
 ## Estrutura do Projeto
 
+- 📁 **postman** Contém um README.md explicando como importar a coleção para utilizar no postman.
+- 📁 **rotas/operadoras_controller.py:** Uma rota (/operadoras/) que busca operadoras com base em um termo fornecido pelo usuário.
 - 📁 **service/api_service.py:** Contém a função buscar_operadoras que realiza a consulta no banco.
 - 📁 **validar/validar_entrada.py:** Função validar_termo_busca que verifica e padroniza o termo de busca.
 - 📁 **sql/buscar_operadoras.sql:** Contém a query SQL utilizada para a busca de operadoras.
