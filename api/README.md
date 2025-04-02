@@ -71,10 +71,9 @@ Este módulo tem como objetivo realizar consultas de operadoras por meio de uma 
     Certifique-se de estar na pasta raiz (Teste-Intuitive-Care) do projeto.
 
 2. **Fazer uma requisição ao endpoint:**
-    Acesse a coleção no [Postman](/Postman) e faça a importação.
+    Acesse a coleção no [Postman](postman/README.md) e faça a importação.
 
 ---
-
 
 ### Conclusão
 
