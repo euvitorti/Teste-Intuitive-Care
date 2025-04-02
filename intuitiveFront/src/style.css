@@ -3,77 +3,104 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+body {
+  background-color: #fff; /* Fundo branco */
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* Fundo branco */
+  color: #000; /* Texto preto */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3); /* Sombra com leve tom roxo */
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6a0dad; /* Título em roxo */
 }
 
-button {
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #6a0dad; /* Borda roxa */
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  outline: none;
+  background: #fff; /* Fundo branco */
+  color: #000; /* Texto preto */
+}
+
+.search-input:focus {
+  border-color: #000;
+}
+
+.search-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background: #6a0dad; /* Botão com fundo roxo */
+  color: #fff; /* Texto do botão em branco */
+  border-radius: 8px;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background 0.3s;
 }
-button:hover {
-  border-color: #646cff;
+
+.search-button:hover {
+  background: #5a0090; /* Tom levemente mais escuro de roxo */
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.error {
+  color: #ff4c4c; /* Vermelho para erros */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .card {
-  padding: 2em;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f7f7f7; /* Fundo claro para os cards */
+  border: 1px solid #6a0dad; /* Borda roxa para destaque */
+  box-shadow: 0 2px 5px rgba(106, 13, 173, 0.2);
+  transition: transform 0.2s;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.card:hover {
+  transform: scale(1.02);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #6a0dad; /* Título do card em roxo */
+}
+
+.card p {
+  margin: 5px 0;
+  color: #000; /* Texto do card em preto */
 }
