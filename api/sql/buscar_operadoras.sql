@@ -1,4 +1,13 @@
-SELECT razao_social, modalidade, uf, telefone, representante, cargo_representante
+SELECT 
+    razao_social, 
+    nome_fantasia, 
+    cnpj, 
+    modalidade, 
+    cidade, 
+    uf, 
+    telefone, 
+    endereco_eletronico, 
+    data_registro_ans
 FROM operadoras_ativas
 WHERE razao_social ILIKE %s
 LIMIT 10;
