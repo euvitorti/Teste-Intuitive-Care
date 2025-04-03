@@ -1,6 +1,6 @@
-# Teste Técnico - Extração, Transformação, Banco de Dados e API
+# Teste Técnico - Extração, Transformação, Banco de Dados, API e FrontEnd
 
-Este projeto consiste em um conjunto de testes técnicos que envolvem Web Scraping, Transformação de Dados, Banco de Dados e API. O objetivo é coletar, estruturar e disponibilizar dados para consultas analíticas e interações via uma API.
+Este projeto consiste em um conjunto de testes técnicos que envolvem Web Scraping, Transformação de Dados, Banco de Dados, API e FrontEnd. O objetivo é coletar, estruturar e disponibilizar dados para consultas analíticas e interações via uma API.
 
 ---
 
@@ -18,9 +18,23 @@ Este projeto consiste em um conjunto de testes técnicos que envolvem Web Scrapi
 
 ---
 
-## Estrutura do Projeto
+## Arquitetura e Princípios de Projeto
 
-Cada módulo do projeto possui sua própria documentação.
+O projeto foi desenvolvido seguindo uma arquitetura em camadas e modular, que facilita a manutenção, a escalabilidade e o teste dos componentes individuais. Em cada módulo, foram aplicados os seguintes princípios:
+
+- **Single Responsibility Principle (SRP):**  
+  Cada módulo (scraping, transformação, banco de dados, API e frontend) foi projetado para ter uma única responsabilidade bem definida, garantindo que as mudanças em uma funcionalidade não afetem outras partes do sistema.
+
+- **Separation of Concerns:**  
+  As diferentes camadas – extração e transformação de dados, persistência em banco de dados, e exposição via API – estão claramente separadas. Isso possibilita que cada parte do sistema seja desenvolvida e aprimorada de forma independente.
+
+- **Modularidade:**  
+  A estrutura em módulos permite que cada parte do projeto tenha sua própria documentação e ciclo de desenvolvimento. Essa abordagem facilita a reutilização de componentes e a integração de novas funcionalidades.
+
+- **Escalabilidade:**  
+  A combinação de tecnologias modernas (FastAPI para a API, Vue.js para o frontend e PostgreSQL para o banco de dados) e a separação clara das responsabilidades contribui para a escalabilidade e evolução contínua do projeto.
+
+Esta arquitetura e a aplicação dos princípios SOLID garantem um código mais organizado, testável e fácil de manter, atendendo aos requisitos dos testes técnicos de Extração, Transformação, Banco de Dados e API.
 
 - 📂 **api:** Servidor Python para disponibilizar os dados via endpoints.
 - 📂 **banco_de_dados:** Estruturação e importação dos dados para o PostgreSQL.
@@ -45,7 +59,7 @@ Cada módulo do projeto possui sua própria documentação.
 
 2. **Configurar o Banco de Dados**
 
-    Certifique-se de que o PostgreSQL está rodando e crie o banco necessário, pois vamos precisar para a configuração do módulo Banco de Dados.
+    Certifique-se de que o PostgreSQL está rodando e crie o banco necessário, pois vamos precisar para a configuração no módulo Banco de Dados.
 
 3. **Executar os Módulos**
 
@@ -74,5 +88,5 @@ Cada módulo do projeto possui sua própria documentação.
 ---
 
 `
-    Boa Sorte!.
+    Boa Sorte!
 `
