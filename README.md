@@ -25,7 +25,6 @@ Cada módulo do projeto possui sua própria documentação.
 - 📂 **api:** Servidor Python para disponibilizar os dados via endpoints.
 - 📂 **banco_de_dados:** Estruturação e importação dos dados para o PostgreSQL.
 - 📂 **intuitiveFront:** Frontend que faz a conexão com a api.
-- 📂 **Postman:** Coleção para testar a api.
 - 📂 **scraping:** Coleta de dados via Web Scraping e download de arquivos.
 - 📂 **transformacao:** Extração, tratamento e formatação dos dados coletados.
 - **requirements.txt:** Lista de pacotes necessários para rodar o projeto.
@@ -70,7 +69,10 @@ Cada módulo do projeto possui sua própria documentação.
 - [Banco de Dados](banco_de_dados/README.md)
 - [API](api/README.md)
 - [Front](intuitiveFront/README.md)
-- [Postman](Postman/README.md)
+- [Postman](api/postman/README.md)
+
 ---
 
-Este projeto é apenas para fins de teste técnico.
+`
+    Boa Sorte!.
+`

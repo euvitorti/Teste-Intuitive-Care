@@ -6,21 +6,18 @@ Esta API permite buscar operadoras com base no nome. O Postman Collection fornec
 
 ## Como Usar
 
-1. Importar a Coleção
+1. **Importar a Coleção:**
     - Abra o Postman
     - Clique em Import > File > Selecione o arquivo JSON da coleção
-    
         ![alt](img/TelaHome.png)
     
     - Acesse a pasta postman/curl e selecione o arquivo
         ![alt](img/TelaImportar.png)
     
-2. Configurar o Servidor
+2. **Configurar o Servidor:**
+    - A API deve estar rodando localmente em http://127.0.0.1:8000. 
 
-    A API deve estar rodando localmente em http://127.0.0.1:8000. 
-
-3. Executar os Testes
-
+3. **Executar os Testes:**
     - Cada requisição simula um cenário de busca. Para testar:
         - Selecione uma requisição
         - Clique em Send
