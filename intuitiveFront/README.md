@@ -4,6 +4,10 @@ Este projeto é uma aplicação frontend desenvolvida em **Vue.js** com **Vite**
 
 ---
 
+### 💡 Você pode testar a aplicação diretamente, sem rodar localmente, acessando: [Site](https://intuitive-vitor.vercel.app/)
+
+---
+
 ## Funcionalidades
 
 - O usuário pode buscar operadoras inserindo um termo na interface.
@@ -21,7 +25,7 @@ Este projeto é uma aplicação frontend desenvolvida em **Vue.js** com **Vite**
 
 ---
 
-## Como Rodar
+## Como Rodar Localmente
 
 ### Rodar o Backend (FastAPI)
 
