@@ -4,7 +4,18 @@ Este projeto é uma aplicação frontend desenvolvida em **Vue.js** com **Vite**
 
 ---
 
-### 💡 Você pode testar a aplicação diretamente, sem rodar localmente, acessando: [Site](https://intuitive-vitor.vercel.app/)
+## 💡 Você pode testar a aplicação diretamente, sem rodar localmente, acessando: [Site](https://intuitive-vitor.vercel.app/)
+
+### Exemplos para testar:
+
+- ✅ Busca válida:
+Tente digitar "instituto". O sistema retornará uma lista com as operadoras encontradas.
+- ❌ Busca inválida:
+Tente digitar "" ou algum termo aleatório como "Não_Existe_Empresa_Com_Esse_Nome". A aplicação irá exibir uma mensagem amigável indicando que nenhuma operadora foi encontrada ou o campo não pode ser vazio.
+
+- <img src="imgReadme/instituto.png" alt="Tela de cadastrar usuário" width="500" />
+- <img src="imgReadme/empresaNãoExiste.png" alt="Tela de cadastrar usuário" width="500" />
+- <img src="imgReadme/campoVazio.png" alt="Tela de cadastrar usuário" width="500" />
 
 ---
 
