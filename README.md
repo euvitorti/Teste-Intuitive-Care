@@ -4,6 +4,16 @@ Este projeto consiste em um conjunto de testes técnicos que envolvem Web Scrapi
 
 ---
 
+### 🚀 Acesse a Aplicação em Produção (Frontend + API)
+
+Em vez de testar o módulo frontend e da api localmente, você pode testar **o frontend em Vue** consumindo diretamente a **API em FastAPI**, ambos hospedados na Vercel:
+
+- **[Acessar Frontend (Vue.js)](https://intuitive-vitor.vercel.app/)**  
+
+> Toda a comunicação entre frontend e backend já está configurada. Ao buscar uma operadora, o frontend faz requisições HTTP para a API em produção, que retorna os dados estruturados do banco de dados PostgreSQL.
+
+---
+
 ## Tecnologias Utilizadas
 
 - Python: 3.12.8
