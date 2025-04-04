@@ -10,7 +10,7 @@ const buscarOperadoras = async () => {
   resultados.value = []
 
   try {
-    const response = await fetch(`http://127.0.0.1:8000/operadoras/?termo=${termo.value}`)
+    const response = await fetch(`https://intuitive-api-vitor-kvo5dr02d-euvitortis-projects.vercel.app/operadoras/?termo=${termo.value}`)
 
     const data = await response.json()
 
