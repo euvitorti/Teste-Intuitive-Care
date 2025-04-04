@@ -4,6 +4,10 @@ Este módulo tem como objetivo realizar consultas de operadoras por meio de uma 
 
 ---
 
+### 💡 Você pode testar a aplicação diretamente, sem rodar localmente, acessando: [Site](https://intuitive-vitor.vercel.app/)
+
+---
+
 ## Funcionalidades
 
 1. **Endpoint:** Um endpoint GET (/operadoras/) está disponível para que os usuários realizem consultas sobre operadoras de saúde.
@@ -61,7 +65,7 @@ Este módulo tem como objetivo realizar consultas de operadoras por meio de uma 
 
 ---
 
-## Como Usar
+## Como Usar Localmente
 
 1. **Executar o Script:**
 

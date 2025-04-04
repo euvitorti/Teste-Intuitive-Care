@@ -49,7 +49,7 @@ Esta API permite buscar operadoras com base no nome. O Postman Collection fornec
 
 ---
 
-## Possíveis Erros
+## Possíveis Respostas
 
 | Nome do Teste                        | Método | URL                                                 | Parâmetro (termo)                                  | Esperado |
 |--------------------------------------|--------|------------------------------------------------------|----------------------------------------------------|----------|
