@@ -4,7 +4,7 @@ Este projeto consiste em um conjunto de testes técnicos que envolvem Web Scrapi
 
 ---
 
-### 🚀 Acesse a Aplicação em Produção (Frontend + API)
+### Acesse a Aplicação em Produção (Frontend + API)
 
 Em vez de testar o módulo frontend e da api localmente, você pode testar **o frontend em Vue** consumindo diretamente a **API em FastAPI**, ambos hospedados na Vercel:
 
