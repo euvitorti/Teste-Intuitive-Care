@@ -1,106 +1,114 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* Fontes e variáveis de cores */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  --primary-color: #6a0dad;
+  --primary-hover: #5a0090;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --card-bg: #fff;
+  --card-shadow: 0 8px 20px rgba(106, 13, 173, 0.15);
 }
 
 body {
-  background-color: #fff; /* Fundo branco */
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
+  color: var(--text-color);
 }
 
 .container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  background-color: #fff; /* Fundo branco */
-  color: #000; /* Texto preto */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3); /* Sombra com leve tom roxo */
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #6a0dad; /* Título em roxo */
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  font-size: 2.5rem;
 }
 
 .search-box {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .search-input {
   flex: 1;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #6a0dad; /* Borda roxa */
+  padding: 15px;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
   border-radius: 8px;
   outline: none;
-  background: #fff; /* Fundo branco */
-  color: #000; /* Texto preto */
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .search-input:focus {
-  border-color: #000;
+  border-color: var(--text-color);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .search-button {
-  padding: 12px 20px;
-  font-size: 16px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
   border: none;
-  background: #6a0dad; /* Botão com fundo roxo */
-  color: #fff; /* Texto do botão em branco */
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .search-button:hover {
-  background: #5a0090; /* Tom levemente mais escuro de roxo */
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
 }
 
 .error {
-  color: #ff4c4c; /* Vermelho para erros */
+  color: #e74c3c;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .result-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .card {
   padding: 20px;
-  border-radius: 8px;
-  background: #f7f7f7; /* Fundo claro para os cards */
-  border: 1px solid #6a0dad; /* Borda roxa para destaque */
-  box-shadow: 0 2px 5px rgba(106, 13, 173, 0.2);
-  transition: transform 0.2s;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card h2 {
   margin: 0 0 10px;
-  font-size: 22px;
-  color: #6a0dad; /* Título do card em roxo */
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
 .card p {
   margin: 5px 0;
-  color: #000; /* Texto do card em preto */
+  font-size: 1rem;
+  color: var(--text-color);
 }
