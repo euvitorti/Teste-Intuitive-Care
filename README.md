@@ -98,5 +98,5 @@ Esta arquitetura e a aplicação dos princípios SOLID garantem um código mais 
 ---
 
 `
-    Boa Sorte!
+     Está estudando ou se inspirando neste projeto? Deixe uma estrela e compartilhe comigo, vou gostar de ver o que você está construindo!
 `
