@@ -15,7 +15,7 @@ def consultar_top_operadoras(data_inicio, data_fim):
         data_fim: Data de fim no formato 'YYYY-MM-DD'.
     
     Retorna:
-        tuple: Uma tupla contendo a lista de colunas e os resultados da consulta.
+        Uma tupla contendo a lista de colunas e os resultados da consulta.
     """
     try:
         # Conecta ao banco de dados utilizando a função centralizada
