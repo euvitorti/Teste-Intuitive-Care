@@ -55,13 +55,42 @@ Este módulo tem como objetivo realizar consultas de operadoras por meio de uma 
 
 ## Estrutura do Projeto
 
-- 📁 **postman** Contém um README.md explicando como importar a coleção para utilizar no postman.
-- 📁 **rotas/operadoras_controller.py:** Uma rota (/operadoras/) que busca operadoras com base em um termo fornecido pelo usuário.
-- 📁 **service/api_service.py:** Contém a função buscar_operadoras que realiza a consulta no banco.
-- 📁 **validar/validar_entrada.py:** Função validar_termo_busca que verifica e padroniza o termo de busca.
-- 📁 **sql/buscar_operadoras.sql:** Contém a query SQL utilizada para a busca de operadoras.
-- **main.py:** Arquivo principal que inicia a API FastAPI.
-- **README.md:** Documentação do projeto.
+A aplicação foi organizada em camadas seguindo boas práticas de separação de responsabilidades. Abaixo está o mapeamento das pastas e seus propósitos:
+
+```
+.
+├── README.md                # Documentação principal do projeto
+├── postman/                 # Recursos para testes com Postman
+│   ├── README.md            # Explicação sobre importação da coleção
+│   ├── curl/                # Coleção Postman (JSON)
+│   └── img/                 # Imagens ilustrativas do Postman
+│
+├── src/                     # Código-fonte da aplicação
+│   ├── main.py              # Ponto de entrada da aplicação FastAPI
+│   │
+│   ├── rotas/               # Camada de controle (rotas)
+│   │   └── operadora_controller.py  # Endpoint principal: /operadoras/
+│   │
+│   ├── service/             # Camada de serviço (regras de negócio)
+│   │   └── api_service.py   # Lógica para buscar operadoras no banco
+│   │
+│   ├── sql/                 # Consultas SQL
+│   │   └── buscar_operadoras.sql  # Query utilizada na busca por operadoras
+│   │
+│   └── validar/             # Camada de validação de entrada
+│       └── validar_entrada.py  # Função para validar e padronizar o termo de busca
+│
+└── tests/                   # Testes automatizados
+    │
+    └── validar/             # Testes da camada de validação
+        └── test_validar_entrada.py
+```
+
+### Destaques
+
+- **Modularização clara:** Cada responsabilidade (rota, serviço, validação, SQL) está separada, facilitando a manutenção e escalabilidade.
+- **Testes bem estruturados:** Os testes foram organizados por domínio (validar), com uso de classes e pytest para garantir robustez.
+- **Recursos extras:** A pasta postman fornece tudo que o usuário precisa para testar a API com interface gráfica.
 
 ---
 
@@ -72,12 +101,27 @@ Este módulo tem como objetivo realizar consultas de operadoras por meio de uma 
     Basta rodar o script principal:
 
     ```
-        uvicorn api.main:app --reload
+        uvicorn api.src.main:app --reload
     ```
     Certifique-se de estar na pasta raiz (Teste-Intuitive-Care) do projeto.
 
 2. **Fazer uma requisição ao endpoint:**
     Acesse a coleção no [Postman](postman/README.md) e faça a importação.
+
+---
+
+## Testes Automatizados
+
+Foram adicionadas de testes para validar se o módulo de validação de entrada (validar_entrada.py) está funcionando conforme o esperado. Essa abordagem organiza os cenários de teste e assegura a integridade do código com futuras alterações. 
+
+- **Os testes abordam:**
+    - **Entradas válidas:** Verifica se o termo de busca é devidamente transformado para maiúsculas e sem espaços extras.
+    - **Entradas inválidas:** Garante que entradas inválidas (por exemplo, termos vazios ou com menos de 2 caracteres) disparem uma exceção apropriada (HTTPException com status 400).
+
+    **Para rodar os testes, basta executar o seguinte comando em qualquer pasta do projeto:**
+    ```
+        pytest -q
+    ```
 
 ---
 
