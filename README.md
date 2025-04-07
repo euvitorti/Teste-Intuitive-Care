@@ -25,6 +25,7 @@ Em vez de testar o módulo frontend e da api localmente, você pode testar **o f
 - pandas: 2.2.3
 - tabula-py: 2.10.0
 - psycopg2: 2.9.10
+- pytest: 8.3.5
 
 ---
 
@@ -44,7 +45,9 @@ O projeto foi desenvolvido seguindo uma arquitetura em camadas e modular, que fa
 - **Escalabilidade:**  
   A combinação de tecnologias modernas (FastAPI para a API, Vue.js para o frontend e PostgreSQL para o banco de dados) e a separação clara das responsabilidades contribui para a escalabilidade e evolução contínua do projeto.
 
-Esta arquitetura e a aplicação dos princípios SOLID garantem um código mais organizado, testável e fácil de manter, atendendo aos requisitos dos testes técnicos de Extração, Transformação, Banco de Dados e API.
+- **Testes unitários e performance:** Foram implementados testes no módulo de api, com foco na confiabilidade e na prevenção de erros. O código também foi escrito com atenção à performance e clareza, visando não apenas cumprir os requisitos funcionais, mas também garantir qualidade técnica e facilidade de manutenção.
+
+Esta arquitetura e a aplicação dos princípios SOLID garantem um código mais organizado, testável e fácil de manter, atendendo aos requisitos dos testes técnicos de Extração, Transformação, Banco de Dados, API e FrontEnd.
 
 - 📂 **api:** Servidor Python para disponibilizar os dados via endpoints.
 - 📂 **banco_de_dados:** Estruturação e importação dos dados para o PostgreSQL.
@@ -57,6 +60,8 @@ Esta arquitetura e a aplicação dos princípios SOLID garantem um código mais 
 ---
 
 ## Configurar o Projeto
+
+> **Observação:** O arquivo `pytest.ini` na raiz do projeto define configurações globais para execução dos testes.
 
 1. **Configurar o Ambiente Virtual**
 
